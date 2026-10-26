@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Eddy & il Gabbiano — Caccia ai tesori</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    background:#0b1e2a;color:#fff;
+    font-family:"Trebuchet MS","Segoe UI",sans-serif;
+    display:flex;align-items:center;justify-content:center;min-height:100vh;
+    overflow:hidden;user-select:none;-webkit-user-select:none;
+  }
+  #wrap{display:flex;flex-direction:column;align-items:center;gap:12px;padding:14px}
+  h1{
+    font-size:22px;letter-spacing:2px;color:#ffe14d;
+    text-shadow:2px 2px 0 #1b6a8f,4px 4px 0 rgba(0,0,0,.3);
+  }
+  #hud{
+    width:960px;max-width:94vw;display:flex;justify-content:space-between;align-items:center;
+    font-size:14px;font-weight:bold;letter-spacing:1px;color:#eafaff;gap:8px;
+  }
+  #hud .pill{
+    background:rgba(0,0,0,.35);border:2px solid #7fd3ff;border-radius:20px;padding:4px 14px;
+  }
+  #hud b{color:#ffe14d}
+  #staminaWrap{flex:1;max-width:260px;height:16px;background:rgba(0,0,0,.4);
+    border:2px solid #7fd3ff;border-radius:10px;overflow:hidden;position:relative;transition:opacity .2s}
+  #staminaBar{height:100%;width:100%;background:linear-gradient(90deg,#ffe14d,#ffb02b);
+    transition:width .05s linear}
+  #staminaWrap.low #staminaBar{background:linear-gradient(90deg,#ff6b4a,#c0392b)}
+  #stage{
+    position:relative;width:960px;max-width:94vw;
+    border:4px solid #2e7d9a;border-radius:10px;overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.5);
+  }
+  canvas{display:block;width:100%;height:auto;image-rendering:pixelated;background:#8fd3ff}
+  .legend{font-size:12px;color:#9fd3e7;letter-spacing:.5px;text-align:center;line-height:1.7}
+  kbd{background:#123b4a;border:1px solid #58c7e8;border-radius:4px;padding:1px 7px;color:#c8f0ff}
+</style>
+</head>
+<body>
+<div id="wrap">
+  <h1>🕊️ EDDY &amp; IL GABBIANO 🐿️</h1>
+  <div id="hud">
+    <div class="pill" id="stateTxt">GABBIANO · A TERRA</div>
+    <div id="staminaWrap"><div id="staminaBar"></div></div>
+    <div class="pill">Velocità <b id="speedTxt">0</b></div>
+    <div class="pill">Quota <b id="altTxt">0</b></div>
+    <div class="pill">🏆 Tesori <b id="treasureTxt">0 / 0</b></div>
+  </div>
+  <div id="stage">
+    <canvas id="game" width="960" height="460"></canvas>
+    <div id="overlay" style="position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;background:rgba(8,30,42,.82);backdrop-filter:blur(3px)"></div>
+  </div>
+  <div class="legend">
+    <kbd>←</kbd> <kbd>→</kbd> muoviti &nbsp;·&nbsp;
+    <kbd>SPAZIO</kbd> flap / salto &nbsp;·&nbsp;
+    tieni <kbd>SPAZIO</kbd> plana (gabbiano) &nbsp;·&nbsp;
+    <kbd>↓</kbd> picchiata &nbsp;·&nbsp;
+    <kbd>TAB</kbd> cambia personaggio &nbsp;·&nbsp;
+    <kbd>E</kbd> parla &nbsp;·&nbsp;
+    <kbd>R</kbd> reset
+  </div>
+</div>
+<script src="seagull.js"></script>
+</body>
+</html>

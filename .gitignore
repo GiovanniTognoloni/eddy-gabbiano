@@ -1,0 +1,9 @@
+# file temporanei / di sistema
+*.png.tmp
+.DS_Store
+Thumbs.db
+*.log
+
+# screenshot di test (generati durante lo sviluppo)
+/screenshots-test/
+*.tmp
