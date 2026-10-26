@@ -6,6 +6,23 @@ il **gabbiano** dall'alto (volo/planata/termiche) ed **Eddy** a terra.
 
 HTML5 + Canvas 2D, **zero dipendenze**.
 
+## 🎬 Gioca online
+
+👉 **[Gioca subito su GitHub Pages](https://giovannitognoloni.github.io/eddy-gabbiano/)**
+
+## 🎮 Comandi
+
+| Tasto | Azione |
+|-------|--------|
+| `←` `→` o `A` `D` | Muoviti / vira |
+| `SPAZIO` | Flap (gabbiano) / salto (Eddy) |
+| tieni `SPAZIO` | Plana (gabbiano) |
+| `↓` | Picchiata (gabbiano) / scendi sott'acqua (Eddy) |
+| `↑` | Risali nuotando (Eddy in acqua) |
+| `TAB` | Cambia personaggio (il compagno ti segue) |
+| `E` | Parla con un animaletto vicino |
+| `R` | Ricomincia |
+
 ## Stato di sviluppo
 
 - [x] **Fase 0** — Setup progetto
